@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+:root {
+	--success-color: green;
+	--error-color: red;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -61,13 +66,13 @@ h2 {
 
 /* form control states 
 
-If form control has class of success, error
+If form control has class of success, error, change border color
 */
 
 .form-control.success input {
-	border-color: green;
+	border-color: var(--success-color);
 }
 
 .form-control.error input {
-	border-color: red;
+	border-color: var(--error-color);
 }
