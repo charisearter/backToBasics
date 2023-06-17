@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--darkGrey: #444444;
+	--orange: #ff8b00;
+	--cream: #feffdb;
+	--gold: #ffc60b;
+	--errorColor: red;
+	--successColor: green;
+}
+
+body {
+	background-color: var(--darkGrey);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: auto;
+}
+
+.container {
+	background-color: var(--cream);
+	border-radius: 5px;
+	box-shadow: 0 2px 10px var(--gold);
+	width: 500px;
+}
+
+h2 {
+	text-align: center;
+	margin: 0 0 20px;
+}
+
+span {
+	display: block;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.form {
+	padding: 30px 40px;
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid var(--darkGrey);
+	border-radius: 4px;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: var(--orange);
+}
+
+.form-control.success input {
+	border-color: var(--successColor);
+}
+
+.form-control.error input {
+	border-color: var(--errorColor);
+}
+
+.form-control small {
+	color: var(--errorColor);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form button {
+	cursor: pointer;
+	background-color: var(--gold);
+	border: 2px solid var(--orange);
+	display: block;
+	font-size: 18px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+a:link,
+:visited {
+	cursor: pointer;
+	color: var(--orange);
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+	color: var(--darkGrey);
+	font-weight: 700;
+}
